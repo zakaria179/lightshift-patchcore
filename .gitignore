@@ -207,6 +207,41 @@ tempCodeRunnerFile.py
 
 # Ruff stuff:
 .ruff_cache/
+# ==========================================
+# LightShift-PatchCore specific exclusions
+# ==========================================
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Machine learning model weights
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.safetensors
+
+# Datasets - never commit raw datasets
+data/*
+!data/README.md
+
+# Experiment outputs
+outputs/
+results/
+artifacts/
+checkpoints/
+mlruns/
+wandb/
+lightning_logs/
+
+# Logs
+*.log
+
+# IDE and OS
+.idea/
+.DS_Store
 
 # PyPI configuration file
 .pypirc
